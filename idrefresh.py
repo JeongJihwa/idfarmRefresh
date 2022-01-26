@@ -8,7 +8,7 @@ import json
 
 if __name__ == "__main__":
     print("아이디팜 갱신 시작!")
-    with open('/src/info.json') as info_file:
+    with open('/private/idfarm.json') as info_file:
         information = json.load(info_file)
     options = webdriver.ChromeOptions()
     options.add_argument('--no-sandbox')
@@ -41,7 +41,7 @@ if __name__ == "__main__":
                     pipdriver.switch_to.alert.accept()
                 except:
                     pass
-                sleep(60)
+                sleep(30)
                 i += 1
         finally:
             pass
